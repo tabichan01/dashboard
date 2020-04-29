@@ -6,7 +6,7 @@
     <!-- Tell the browser to be responsive to screen width -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Favicon icon -->
-    <title> Dashboard </title>
+    <title> Statistics in Singapore </title>
     <!-- Bootstrap Core CSS -->
     <link href="assets/node_modules/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="assets/node_modules/perfect-scrollbar/css/perfect-scrollbar.css" rel="stylesheet">
@@ -31,7 +31,7 @@
 
                 <div class="row page-titles">
                     <div class="col-md-5 align-self-center">
-                        <h3 class="text-themecolor">Dashboard</h3>
+                        <h3 class="text-themecolor"> Covid-19 Statistics in Singapore </h3>
                     </div>
 
                 </div>
@@ -43,13 +43,13 @@
                             <div class="card-body">
                                 <div class="d-flex no-block">
                                     <div>
-                                        <h5 class="card-title m-b-0">Sales Chart</h5>
+                                        <h5 class="card-title m-b-0">Singapore Covid-19 Update </h5>
                                     </div>
                                     <div class="ml-auto">
                                         <ul class="list-inline text-center font-12">
-                                            <li><i class="fa fa-circle text-success"></i> SITE A</li>
-                                            <li><i class="fa fa-circle text-info"></i> SITE B</li>
-                                            <li><i class="fa fa-circle text-primary"></i> SITE C</li>
+                                            <li><i class="fa fa-circle text-success"></i> Total </li>
+                                            <li><i class="fa fa-circle text-info"></i> New</li>
+                                            <li><i class="fa fa-circle text-primary"></i> Death</li>
                                         </ul>
                                     </div>
                                 </div>
@@ -62,19 +62,20 @@
                         <div class="card">
                             <div class="card-body">
                                 <div class="d-flex m-b-30 no-block">
-                                    <h5 class="card-title m-b-0 align-self-center">Our Visitors</h5>
+                                    <h5 class="card-title m-b-0 align-self-center">Total Swabs</h5>
                                     <div class="ml-auto">
                                         <select class="custom-select b-0">
-                                            <option selected="">Today</option>
+                                            <option selected="">20 April 2020</option>
                                             <option value="1">Tomorrow</option>
                                         </select>
                                     </div>
                                 </div>
                                 <div id="visitor" style="height:260px; width:100%;"></div>
                                 <ul class="list-inline m-t-30 text-center font-12">
-                                    <li><i class="fa fa-circle text-purple"></i> Tablet</li>
-                                    <li><i class="fa fa-circle text-success"></i> Desktops</li>
-                                    <li><i class="fa fa-circle text-info"></i> Mobile</li>
+                                    <li><i class="fa fa-circle text-warning"></i>Total Swabs</li>
+                                    <li><i class="fa fa-circle text-purple"></i>Unique Persons </li>
+                                    <li><i class="fa fa-circle text-success"></i> Per 1,000,000 Total Population</li>
+                                    <li><i class="fa fa-circle text-info"></i> Unique Per 1,000,000 Total Population </li>
                                 </ul>
                             </div>
                         </div>
@@ -87,61 +88,81 @@
                             <div class="card-body">
                                 <div class="d-flex">
                                     <div>
-                                        <h5 class="card-title">Projects of the Month</h5>
+                                        <h5 class="card-title">Financial Support - GST Voucher 2020</h5>
                                     </div>
-                                    <div class="ml-auto">
-                                        <select class="custom-select b-0">
-                                            <option selected="">January</option>
-                                            <option value="1">February</option>
-                                            <option value="2">March</option>
-                                            <option value="3">April</option>
-                                        </select>
-                                    </div>
+
                                 </div>
                                 <div class="table-responsive m-t-20 no-wrap">
                                     <table class="table vm no-th-brd pro-of-month">
                                         <thead>
                                             <tr>
-                                                <th colspan="2">Assigned</th>
-                                                <th>Name</th>
-                                                <th>Budget</th>
+                                                <th colspan="1">Assigned</th>
+                                                <th>Cash Given </th>
+                                                <th>When?</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <tr>
-                                                <td style="width:50px;"><span class="round">S</span></td>
+
                                                 <td>
-                                                    <h6>Sunil Joshi</h6><small class="text-muted">Web Designer</small></td>
-                                                <td>Elite Admin</td>
-                                                <td>$3.9K</td>
+                                                    <h6>Solidarity Payment</h6><small class="text-muted">Above 21</small></td>
+                                                <td>$600</td>
+                                                <td>14 April 2020</td>
                                             </tr>
                                             <tr class="active">
-                                                <td><span class="round"><img src="assets/images/users/2.jpg" alt="user" width="50"></span></td>
+
                                                 <td>
-                                                    <h6>Andrew</h6><small class="text-muted">Project Manager</small></td>
-                                                <td>Real Homes</td>
-                                                <td>$23.9K</td>
+                                                    <h6>Care and Support</h6><small class="text-muted">Above 21</small></td>
+                                                <td>$300 - $600</td>
+                                                <td>June 2020</td>
                                             </tr>
                                             <tr>
-                                                <td><span class="round round-success">B</span></td>
+
                                                 <td>
-                                                    <h6>Bhavesh patel</h6><small class="text-muted">Developer</small></td>
-                                                <td>MedicalPro Theme</td>
-                                                <td>$12.9K</td>
+                                                    <h6>PAssion Card top-up</h6><small class="text-muted">Aged 50 and above</small></td>
+                                                <td>$100</td>
+                                                <td>August to September 2020</td>
                                             </tr>
                                             <tr>
-                                                <td><span class="round round-primary">N</span></td>
+
                                                 <td>
-                                                    <h6>Nirav Joshi</h6><small class="text-muted">Frontend Eng</small></td>
-                                                <td>Elite Admin</td>
-                                                <td>$10.9K</td>
+                                                    <h6>Grocery Vouchers</h6><small class="text-muted">Needy Singaporeans</small></td>
+                                                <td>$300, $100	</td>
+                                                <td>2020 and 2021</td>
                                             </tr>
                                             <tr>
-                                                <td><span class="round round-warning">M</span></td>
+
                                                 <td>
-                                                    <h6>Micheal Doe</h6><small class="text-muted">Content Writer</small></td>
-                                                <td>Helping Hands</td>
-                                                <td>$12.9K</td>
+                                                    <h6>Workfare Special Payment</h6><small class="text-muted">Low-wage workers aged 35 and above in 2019</small></td>
+                                                <td>$3,000</td>
+                                                <td>July and October 2020
+</td>
+                                            </tr>
+
+                                            <tr>
+
+                                                <td>
+                                                    <h6>GST Voucher (Cash)</h6><small class="text-muted">Adult with at least 1 Singaporean child aged 20 and below</small></td>
+                                                <td>$300</td>
+                                                <td>August to September 2020
+</td>
+                                            </tr>
+                                            <tr>
+
+                                                <td>
+                                                    <h6>GST Voucher (U-Save)</h6><small class="text-muted">	Households with 5 or more members</small></td>
+                                                <td>$120 - $200</td>
+                                                <td>October 2020 and January 2021
+                                          </td>
+                                            </tr>
+
+                                            <tr>
+
+                                                <td>
+                                                    <h6>GST Voucher (U-Save)</h6><small class="text-muted">Eligible households</small></td>
+                                                <td>$480 - $800</td>
+                                                <td>April, July, October 2020 and January 2021
+                                          </td>
                                             </tr>
                                         </tbody>
                                     </table>

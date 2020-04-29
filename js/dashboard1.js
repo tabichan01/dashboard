@@ -14,10 +14,10 @@ $(function() {
         bindto: '#visitor',
         data: {
             columns: [
-                ['Other', 30],
-                ['Desktop', 10],
-                ['Tablet', 40],
-                ['Mobile', 50],
+                ['Total Swabs', 121774],
+                ['Unique Persons', 82644],
+                ['Per 1,000,000 Total Population', 21400],
+                [' Unique Per 1,000,000 Total Population', 14500],
             ],
 
             type: 'donut',
@@ -29,7 +29,7 @@ $(function() {
             label: {
                 show: false
             },
-            title: "Visits",
+            title: "Number of Swabs Tested",
             width: 20,
 
         },
@@ -40,7 +40,7 @@ $(function() {
             //or hide: ['data1', 'data2']
         },
         color: {
-            pattern: ['#eceff1', '#24d2b5', '#6772e5', '#20aee3']
+            pattern: ['	#FF4500', '#24d2b5', '#6772e5', '#20aee3']
         }
     });
 
@@ -50,46 +50,46 @@ $(function() {
     Morris.Area({
         element: 'sales-chart',
         data: [{
-                period: '2011',
-                Sales: 50,
-                Earning: 80,
-                Marketing: 20
+                period: '27 April',
+                Sales: 13624,
+                Earning: 931,
+                Marketing: 12
             }, {
-                period: '2012',
-                Sales: 130,
-                Earning: 100,
-                Marketing: 80
+                period: '26 April',
+                Sales: 12693,
+                Earning: 618,
+                Marketing: 12
             }, {
-                period: '2013',
-                Sales: 80,
-                Earning: 60,
-                Marketing: 70
+                period: '25 April',
+                Sales: 12075,
+                Earning: 897,
+                Marketing: 12
             }, {
-                period: '2014',
-                Sales: 70,
-                Earning: 200,
-                Marketing: 140
+                period: '24 April',
+                Sales: 11178,
+                Earning:  1037,
+                Marketing: 12
             }, {
-                period: '2015',
-                Sales: 180,
-                Earning: 150,
-                Marketing: 140
+                period: '23 April',
+                Sales: 10141,
+                Earning: 1016,
+                Marketing: 12
             }, {
-                period: '2016',
-                Sales: 105,
-                Earning: 100,
-                Marketing: 80
+                period: '22 April',
+                Sales: 9125,
+                Earning: 1111,
+                Marketing: 11
             },
             {
-                period: '2017',
-                Sales: 250,
-                Earning: 150,
-                Marketing: 200
+                period: '21 April',
+                Sales: 8014,
+                Earning: 1426,
+                Marketing: 11
             }
         ],
         xkey: 'period',
         ykeys: ['Sales', 'Earning', 'Marketing'],
-        labels: ['Site A', 'Site B', 'Site C'],
+        labels: ['Total ', ' New', 'Death'],
         pointSize: 0,
         fillOpacity: 0,
         pointStrokeColors: ['#20aee3', '#24d2b5', '#6772e5'],
