@@ -14,10 +14,13 @@ $(function() {
         bindto: '#visitor',
         data: {
             columns: [
-                ['Total Swabs', 121774],
-                ['Unique Persons', 82644],
-                ['Per 1,000,000 Total Population', 21400],
-                [' Unique Per 1,000,000 Total Population', 14500],
+                ['Bangladeshi/Indian', 4530],
+                ['Singaporean', 1286],
+                ['Chinese', 233],
+                ['Myanmarian', 136],
+                ['Malaysian', 95],
+                ['Unidentified', 62],
+
             ],
 
             type: 'donut',
@@ -29,9 +32,8 @@ $(function() {
             label: {
                 show: false
             },
-            title: "Number of Swabs Tested",
+            title: "Nationality",
             width: 20,
-
         },
 
         legend: {
@@ -40,7 +42,7 @@ $(function() {
             //or hide: ['data1', 'data2']
         },
         color: {
-            pattern: ['	#FF4500', '#24d2b5', '#6772e5', '#20aee3']
+            pattern: ['	#FF4500', '#6772e5', '#24d2b5','F08080', '#20aee3', 'black']
         }
     });
 
@@ -50,46 +52,46 @@ $(function() {
     Morris.Area({
         element: 'sales-chart',
         data: [{
-                period: '27 April',
-                Sales: 13624,
-                Earning: 931,
-                Marketing: 12
+                May: '17 May',
+                Total: 28038,
+                New: 682,
+                Death: 22
             }, {
-                period: '26 April',
-                Sales: 12693,
-                Earning: 618,
-                Marketing: 12
+                May: '18 May',
+                Total: 28343,
+                New: 305,
+                Death: 22
             }, {
-                period: '25 April',
-                Sales: 12075,
-                Earning: 897,
-                Marketing: 12
+                May: '19 May',
+                Total: 28794,
+                New: 451,
+                Death: 22
             }, {
-                period: '24 April',
-                Sales: 11178,
-                Earning:  1037,
-                Marketing: 12
+                May: '20 May',
+                Total: 29364,
+                New:  570,
+                Death: 22
             }, {
-                period: '23 April',
-                Sales: 10141,
-                Earning: 1016,
-                Marketing: 12
+                May: '21 May',
+                Total: 29812,
+                New: 448,
+                Death: 23
             }, {
-                period: '22 April',
-                Sales: 9125,
-                Earning: 1111,
-                Marketing: 11
+                May: '22 May',
+                Total: 30426,
+                New: 614,
+                Death: 23
             },
             {
-                period: '21 April',
-                Sales: 8014,
-                Earning: 1426,
-                Marketing: 11
+                May: '23 May',
+                Total: 31068,
+                New: 642,
+                Death: 23
             }
         ],
-        xkey: 'period',
-        ykeys: ['Sales', 'Earning', 'Marketing'],
-        labels: ['Total ', ' New', 'Death'],
+        xkey: 'May',
+        ykeys: ['Total', 'New', 'Death'],
+        labels: ['Total Cases ', ' New', 'Death'],
         pointSize: 0,
         fillOpacity: 0,
         pointStrokeColors: ['#20aee3', '#24d2b5', '#6772e5'],
@@ -99,8 +101,40 @@ $(function() {
         hideHover: 'auto',
         lineColors: ['#20aee3', '#24d2b5', '#6772e5'],
         resize: true
+    });
+
+    function addRemoveClass(theRows) {
+
+        theRows.removeClass("odd even");
+        theRows.filter(":odd").addClass("odd");
+        theRows.filter(":even").addClass("even");
+    }
+
+    var rows = $("table#myTable tr:not(:first-child)");
+
+    addRemoveClass(rows);
+
+
+    $("#selectField").on("change", function() {
+
+        var selected = this.value;
+
+        if (selected != "All") {
+
+            rows.filter("[position=" + selected + "]").show();
+            rows.not("[position=" + selected + "]").hide();
+            var visibleRows = rows.filter("[position=" + selected + "]");
+            addRemoveClass(visibleRows);
+        } else {
+
+            rows.show();
+            addRemoveClass(rows);
+
+        }
 
     });
+
+
 
 
 });

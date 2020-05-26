@@ -62,25 +62,27 @@
                         <div class="card">
                             <div class="card-body">
                                 <div class="d-flex m-b-30 no-block">
-                                    <h5 class="card-title m-b-0 align-self-center">Total Swabs</h5>
+                                    <h5 class="card-title m-b-0 align-self-center">Nationality Involved </h5>
                                     <div class="ml-auto">
                                         <select class="custom-select b-0">
-                                            <option selected="">20 April 2020</option>
-                                            <option value="1">Tomorrow</option>
+                                            <option >24 May 2020</option>
                                         </select>
                                     </div>
                                 </div>
                                 <div id="visitor" style="height:260px; width:100%;"></div>
                                 <ul class="list-inline m-t-30 text-center font-12">
-                                    <li><i class="fa fa-circle text-warning"></i>Total Swabs</li>
-                                    <li><i class="fa fa-circle text-purple"></i>Unique Persons </li>
-                                    <li><i class="fa fa-circle text-success"></i> Per 1,000,000 Total Population</li>
-                                    <li><i class="fa fa-circle text-info"></i> Unique Per 1,000,000 Total Population </li>
+                                    <li><i class="fa fa-circle text-warning"></i>Bangladeshi/Indian</li>
+                                    <li><i class="fa fa-circle text-purple"></i>Singaporean </li>
+                                    <li><i class="fa fa-circle text-success"></i> Chinese</li>
+                                    <li><i class="fa fa-circle text-danger"></i> Myanmarian </li>
+                                    <li><i class="fa fa-circle text-info"></i> Malaysian </li>
+                                    <li><i class="fa fa-circle text-black"></i> Unidentified </li>
                                 </ul>
                             </div>
                         </div>
                     </div>
                 </div>
+
                 <div class="row">
                     <!-- Column -->
                     <div class="col-lg-8">
@@ -88,12 +90,33 @@
                             <div class="card-body">
                                 <div class="d-flex">
                                     <div>
-                                        <h5 class="card-title">Financial Support - GST Voucher 2020</h5>
+                                        <h5 class="card-title">Financial Support 2020</h5>
                                     </div>
+                                    <div class="ml-auto">
+                                        <!-- <select class="custom-select b-0">
+                                            <option selected="">All</option>
+                                            <option value="1">February</option>
+                                            <option value="2">March</option>
+                                            <option value="3">April</option>
+                                        </select> -->
+                                         <div class="optionsDiv">
+                                            Filter By Eligiblity:
+                                        <select id="selectField">
+                                            <option value="All" selected>All</option>
+                                            <option value="Above">Above 21</option>
+                                            <option value="Old"> Ages 50 and above</option>
+                                            <option value="Households">Households</option>
+                                            <option value="Needy">Needy Singaporeans</option>
 
+                                        </select>
+                                      </div>
+                                    </div>
                                 </div>
+
+
                                 <div class="table-responsive m-t-20 no-wrap">
                                     <table class="table vm no-th-brd pro-of-month">
+                                      <table id="myTable">
                                         <thead>
                                             <tr>
                                                 <th colspan="1">Assigned</th>
@@ -102,35 +125,34 @@
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <tr>
 
+                                            <tr position="Above">
                                                 <td>
                                                     <h6>Solidarity Payment</h6><small class="text-muted">Above 21</small></td>
                                                 <td>$600</td>
                                                 <td>14 April 2020</td>
                                             </tr>
-                                            <tr class="active">
+                                            <tr  position="Above">
 
                                                 <td>
                                                     <h6>Care and Support</h6><small class="text-muted">Above 21</small></td>
                                                 <td>$300 - $600</td>
                                                 <td>June 2020</td>
                                             </tr>
-                                            <tr>
-
+                                            <tr position="Old">
                                                 <td>
                                                     <h6>PAssion Card top-up</h6><small class="text-muted">Aged 50 and above</small></td>
                                                 <td>$100</td>
                                                 <td>August to September 2020</td>
                                             </tr>
-                                            <tr>
+                                            <tr position="Needy">
 
                                                 <td>
                                                     <h6>Grocery Vouchers</h6><small class="text-muted">Needy Singaporeans</small></td>
                                                 <td>$300, $100	</td>
                                                 <td>2020 and 2021</td>
                                             </tr>
-                                            <tr>
+                                            <tr position="Needy">
 
                                                 <td>
                                                     <h6>Workfare Special Payment</h6><small class="text-muted">Low-wage workers aged 35 and above in 2019</small></td>
@@ -139,7 +161,7 @@
 </td>
                                             </tr>
 
-                                            <tr>
+                                            <tr  position="Households">
 
                                                 <td>
                                                     <h6>GST Voucher (Cash)</h6><small class="text-muted">Adult with at least 1 Singaporean child aged 20 and below</small></td>
@@ -147,7 +169,7 @@
                                                 <td>August to September 2020
 </td>
                                             </tr>
-                                            <tr>
+                                            <tr  position="Households">
 
                                                 <td>
                                                     <h6>GST Voucher (U-Save)</h6><small class="text-muted">	Households with 5 or more members</small></td>
@@ -156,7 +178,7 @@
                                           </td>
                                             </tr>
 
-                                            <tr>
+                                            <tr  position="Households">
 
                                                 <td>
                                                     <h6>GST Voucher (U-Save)</h6><small class="text-muted">Eligible households</small></td>
@@ -166,14 +188,16 @@
                                             </tr>
                                         </tbody>
                                     </table>
+                                  </table>
                                 </div>
+
+
                             </div>
                         </div>
                     </div>
                     <!-- Column -->
                     <!-- Column -->
             </div>
-        </div>
 
     </div>
 
@@ -182,8 +206,6 @@
     <script src="js/waves.js"></script>
     <!--Custom JavaScript -->
     <script src="js/custom.min.js"></script>
-    <!-- ============================================================== -->
-    <!-- This page plugins -->
     <!-- ============================================================== -->
     <!--morris JavaScript -->
     <script src="assets/node_modules/raphael/raphael-min.js"></script>
